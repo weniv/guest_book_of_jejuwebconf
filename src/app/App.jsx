@@ -8,7 +8,7 @@ function App() {
             <GlobalStyles />
             <Routes>
                 <Route path="/" element={<InputPage />} />
-                <Route path="/frame" element={<BoardPage />} />
+                <Route path="/board" element={<BoardPage />} />
             </Routes>
         </div>
     );
