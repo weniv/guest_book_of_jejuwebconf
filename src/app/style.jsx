@@ -4,6 +4,17 @@ import reset from "styled-reset";
 const GlobalStyles = createGlobalStyle` 
 ${reset}
 
+:root {
+    --main-color: #ED7A3A;
+    --point-color: #FFCE8E;
+    --bg-color: #F3EBE0;
+    --font-color: #000;
+    --gray-color: #908377;
+    --placeholder-color: #A4A4A4;
+    --input-color: #EFEFEF;
+    --white-color: #fff;
+}
+
 body{
     width: 100vw;
     height: 100vh;
@@ -15,6 +26,13 @@ body{
         src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
         format("woff");
         font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GongGothicMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+        font-weight: normal;
         font-style: normal;
     }
 }
@@ -33,8 +51,11 @@ body{
 }
 
 button {
-  border: none;
-  cursor: pointer;
+    font-family: 'GongGothicMedium';
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
 }
 `;
 
