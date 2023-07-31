@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import Logo from "../assets/logo.svg";
+import axios from "axios";
 
 export default function MobileInput({ setIsComplete }) {
     const [isLoading, setIsLoading] = useState(true);
@@ -23,14 +24,24 @@ export default function MobileInput({ setIsComplete }) {
         }
     }, [content, name]);
 
-    const handleAddPost = (e) => {
+    const handleAddPost = async (e) => {
         e.preventDefault();
+        const API_URL = process.env.REACT_APP_SERVER_HOST;
+        const config = {
+            author: name,
+            post_msg: content,
+        };
+
         if (content.length === 0 || name.length === 0) {
             window.alert("모든 값을 입력해주세요!");
         } else {
-            console.log(content, name);
-            // postAPI 요청
-            setIsComplete(true);
+            try {
+                const res = await axios.post(API_URL + "post/", config);
+                console.log(res);
+                setIsComplete(true);
+            } catch (err) {
+                console.log(err);
+            }
         }
     };
 

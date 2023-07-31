@@ -16,10 +16,10 @@ export default function BoardPage() {
                 <Board>
                     <HigherElements />
                     <section style={{ position: "relative" }}>{postList}</section>
-                    <section style={{ position: "relative", top: "8px", left: "8px" }}>{postList}</section>
-                    <section style={{ position: "relative", top: "16px", left: "16px" }}>{postList}</section>
-                    <section style={{ position: "relative", top: "24px", left: "24px" }}>{postList}</section>
-                    <section style={{ position: "relative", top: "32px", left: "32px" }}>{postList}</section>
+                    <section style={{ position: "relative", top: "5px", left: "5px" }}>{postList}</section>
+                    <section style={{ position: "relative", top: "10px", left: "10px" }}>{postList}</section>
+                    <section style={{ position: "relative", top: "15px", left: "15px" }}>{postList}</section>
+                    <section style={{ position: "relative", top: "20px", left: "20px" }}>{postList}</section>
                 </Board>
             </Main>
         </>
