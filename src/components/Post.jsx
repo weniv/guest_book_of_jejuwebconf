@@ -1,13 +1,13 @@
 import { styled } from "styled-components";
 
-export default function PostWhite({ content, name }) {
+export default function Post({ id, content, name, type, top, left, boardZIndex, zIndex }) {
+    console.log(type);
     return (
         <>
             {content && (
-                <Cont>
-                    <Header>
+                <Cont type={type} top={top} left={left}>
+                    <Header type={type}>
                         <BgIcon>
-                            <div></div>
                             <div></div>
                             <div></div>
                         </BgIcon>
@@ -23,10 +23,13 @@ export default function PostWhite({ content, name }) {
 }
 
 const Cont = styled.article`
+    position: absolute;
+    top: ${(props) => props.top}px;
+    left: ${(props) => props.left}px;
     width: 223px;
     min-height: 223px;
     max-height: 293px;
-    background-color: var(--point-color);
+    background-color: ${(props) => (props.type === "white" ? "var(--white-color)" : "var(--point-color)")};
     border: 2px solid var(--main-color);
     border-radius: 13px;
     overflow: hidden;
@@ -36,7 +39,7 @@ const Cont = styled.article`
 const Header = styled.div`
     position: relative;
     height: 30px;
-    background-color: var(--white-color);
+    background-color: ${(props) => (props.type === "white" ? "var(--point-color)" : "var(--white-color)")};
     border-bottom: 2px solid var(--main-color);
 `;
 
