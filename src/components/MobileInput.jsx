@@ -1,13 +1,18 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import Logo from "../assets/logo.svg";
 import axios from "axios";
+import { PostContext } from "../context/PostContext";
 
 export default function MobileInput({ setIsComplete }) {
+    const { postData, setPostData } = useContext(PostContext);
     const [isLoading, setIsLoading] = useState(true);
     const [content, setContent] = useState("");
     const [name, setName] = useState("");
 
+    // console.log(postData[7].content);
+
+    // setPostData()
     setTimeout(() => {
         setIsLoading(false);
     }, 1000);
@@ -33,11 +38,16 @@ export default function MobileInput({ setIsComplete }) {
         };
 
         if (content.length === 0 || name.length === 0) {
-            window.alert("모든 값을 입력해주세요!");
+            window.alert("내용과 이름을 모두 입력해주세요!");
         } else {
             try {
                 const res = await axios.post(API_URL + "post/", config);
-                console.log(res);
+                // context에 데이터 저장
+                const crrPost = res.data;
+                let copy = postData;
+                copy[crrPost.id].content = crrPost.post_msg;
+                copy[crrPost.id].name = crrPost.author;
+                setPostData(copy);
                 setIsComplete(true);
             } catch (err) {
                 console.log(err);
