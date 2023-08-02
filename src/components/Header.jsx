@@ -16,28 +16,29 @@ export default function Header() {
 const Cont = styled.header`
     position: relative;
     width: 100vw;
-    height: 62px;
-    padding: 22px 0 17px 0;
+    height: 124px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--main-color);
     color: var(--white-color);
-    text-align: center;
     font-family: "GongGothicMedium";
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 500;
     text-transform: uppercase;
 `;
 
 const BgIcon = styled.div`
     display: flex;
-    gap: 8px;
+    gap: 16px;
     position: absolute;
-    top: 24px;
-    left: 40px;
+    top: 48px;
+    left: 80px;
 
     div {
-        width: 13px;
-        height: 13px;
-        border-radius: 7px;
+        width: 27px;
+        height: 27px;
+        border-radius: 27px;
         background-color: var(--white-color);
     }
 `;

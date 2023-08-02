@@ -36,54 +36,54 @@ const Cont = styled.div`
 
 const Element1 = styled.img`
     position: absolute;
-    top: 277px;
-    left: 205px;
+    top: 500px;
+    left: 450px;
 `;
 
 const Element2 = styled.img`
     position: absolute;
-    top: 50px;
-    left: 1355px;
+    top: 100px;
+    left: 2710px;
 `;
 
 const Element3 = styled.img`
     position: absolute;
-    top: 36px;
-    left: 559px;
+    top: 50px;
+    left: 1118px;
 `;
 
 const Element4 = styled.img`
     position: absolute;
-    top: 36px;
-    left: 490px;
+    top: 50px;
+    left: 980px;
 `;
 
 const Element7 = styled.img`
     position: absolute;
-    top: 482px;
-    left: 1257px;
+    top: 1090px;
+    left: 2514px;
 `;
 
 const Element8 = styled.img`
     position: absolute;
-    top: 482px;
-    left: 1347px;
+    top: 1090px;
+    left: 2694px;
 `;
 
 const Element9 = styled.img`
     position: absolute;
-    top: 132px;
-    left: 1468px;
+    top: 324px;
+    left: 2906px;
 `;
 
 const Element11 = styled.img`
     position: absolute;
-    top: 514px;
-    left: 350px;
+    top: 1050px;
+    left: 1400px;
 `;
 
 const Element12 = styled.img`
     position: absolute;
-    top: 813px;
-    left: 1097px;
+    top: 1626px;
+    left: 2194px;
 `;

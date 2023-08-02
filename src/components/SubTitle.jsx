@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 import Logo from "../assets/logo.svg";
 import Magnifier from "../assets/icon-magnifier.svg";
-import Qr from "../assets/qr.svg";
+import QRCode from "react-qr-code";
+import Triangle from "../assets/triangle.svg";
 
 export default function SubTitle() {
     return (
@@ -14,9 +15,12 @@ export default function SubTitle() {
                 </Desc>
             </div>
             <div>
-                <QrDesc>소감 작성하기</QrDesc>
+                <QrDesc>
+                    소감 작성하기
+                    <img src={Triangle} alt="" />
+                </QrDesc>
                 <QrCont>
-                    <img src={Qr} alt="" />
+                    <StyledQRCode value={"/"} />
                 </QrCont>
             </div>
         </Cont>
@@ -24,7 +28,7 @@ export default function SubTitle() {
 }
 
 const Cont = styled.section`
-    height: 128px;
+    height: 256px;
     display: flex;
     justify-content: space-between;
 
@@ -34,46 +38,65 @@ const Cont = styled.section`
 `;
 
 const LogoImg = styled.img`
-    margin-top: 22px;
-    margin-right: 26px;
+    margin-top: 45px;
+    margin-right: 53px;
 `;
 
 const Desc = styled.div`
-    width: 579px;
-    height: 44px;
-    margin-top: 60px;
-    padding: 0 22px;
+    width: 1158px;
+    height: 88px;
+    margin-top: 120px;
+    padding: 22px 27px 19px 44px;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 56px;
-    border: 2px solid var(--main-color);
+    border-radius: 112px;
+    border: 4px solid var(--main-color);
     color: var(--main-color);
     font-family: "GongGothicMedium";
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 500;
 `;
 
 const QrDesc = styled.span`
-    width: 153px;
-    height: 44px;
-    border-radius: 28px;
+    position: relative;
+    width: 306px;
+    height: 88px;
+    border-radius: 56px;
     background-color: var(--main-color);
     font-family: "GongGothicMedium";
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 500;
     color: var(--white-color);
     text-align: center;
-    line-height: 44px;
-    margin-top: 60px;
-    margin-right: 27px;
+    line-height: 88px;
+    margin-top: 120px;
+    margin-right: 54px;
+
+    img {
+        position: absolute;
+        top: 0;
+        right: -17px;
+    }
 `;
 
 const QrCont = styled.div`
-    padding: 8px;
-    width: 96px;
-    height: 96px;
-    border-radius: 14px;
+    padding: 17px;
+    width: 192px;
+    height: 192px;
+    border-radius: 28px;
     background: var(--main-color);
-    margin-top: 19px;
+    margin-top: 38px;
+
+    img {
+        width: 158px;
+    }
+`;
+
+const StyledQRCode = styled(QRCode)`
+    width: 158px;
+    height: 158px;
+    border-radius: 18px;
+    background-color: var(--white-color);
+    padding: 18px;
 `;
