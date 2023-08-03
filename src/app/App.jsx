@@ -14,7 +14,7 @@ function App() {
                     <GlobalStyles />
                     <Routes>
                         <Route path="/" element={<InputPage />} />
-                        <Route path={process.env.PUBLIC_URL + "/board"} element={<BoardPage />} />
+                        <Route path={"/board"} element={<BoardPage />} />
                     </Routes>
                 </PostProvider>
             </QueryClientProvider>
