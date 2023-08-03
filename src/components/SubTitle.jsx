@@ -20,7 +20,7 @@ export default function SubTitle() {
                     <img src={Triangle} alt="" />
                 </QrDesc>
                 <QrCont>
-                    <StyledQRCode value="https://weniv.github.io/guest_book_of_jejuwebconf/" />
+                    <StyledQRCode value="https://main--fabulous-pony-3e51c0.netlify.app/" />
                 </QrCont>
             </div>
         </Cont>
