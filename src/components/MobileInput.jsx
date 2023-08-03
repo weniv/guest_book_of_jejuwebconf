@@ -38,7 +38,7 @@ export default function MobileInput({ setIsComplete }) {
             window.alert("내용과 이름을 모두 입력해주세요!");
         } else {
             try {
-                await axios.post(API_URL + "post/", config);
+                await axios.post("post/", config);
                 setIsComplete(true);
             } catch (err) {
                 console.log(err);
@@ -46,9 +46,9 @@ export default function MobileInput({ setIsComplete }) {
         }
     };
 
-    const updateMutation = useMutation(() => handleAddPost(), {
-        onSuccess: () => queryClient.invalidateQueries(["getPostData"]),
-    });
+    // const updateMutation = useMutation(() => handleAddPost(), {
+    //     onSuccess: () => queryClient.invalidateQueries(["getPostData"]),
+    // });
 
     return (
         <InputCont>
@@ -86,7 +86,6 @@ export default function MobileInput({ setIsComplete }) {
                         onChange={(e) => {
                             setName(e.target.value);
                         }}
-                        size={name.length}
                     />
                     {content.length === 0 || name.length === 0 ? (
                         <button className="disabled" disabled>

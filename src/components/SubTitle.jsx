@@ -10,7 +10,7 @@ export default function SubTitle() {
             <div>
                 <LogoImg src={Logo} alt="" />
                 <Desc>
-                    <span>웹컨퍼런스에 참여하신 소감을 자유롭게 작성해주세요 :)</span>
+                    <span>QR을 스캔해서 제주 웹컨퍼런스에 소감을 남겨주세요 :)</span>
                     <img src={Magnifier} alt="" />
                 </Desc>
             </div>
@@ -20,7 +20,7 @@ export default function SubTitle() {
                     <img src={Triangle} alt="" />
                 </QrDesc>
                 <QrCont>
-                    <StyledQRCode value="https://main--fabulous-pony-3e51c0.netlify.app/" />
+                    <StyledQRCode value="https://weniv.github.io/guest_book_of_jejuwebconf/" />
                 </QrCont>
             </div>
         </Cont>
@@ -28,6 +28,7 @@ export default function SubTitle() {
 }
 
 const Cont = styled.section`
+    padding: 0 110px;
     height: 256px;
     display: flex;
     justify-content: space-between;
