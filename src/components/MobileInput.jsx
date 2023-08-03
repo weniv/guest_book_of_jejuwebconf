@@ -1,18 +1,16 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
-import Logo from "../assets/logo.svg";
 import axios from "axios";
-import { PostContext } from "../context/PostContext";
+import { useQueryClient, useMutation } from "@tanstack/react-query";
+import Logo from "../assets/logo.svg";
 
 export default function MobileInput({ setIsComplete }) {
-    const { postData, setPostData } = useContext(PostContext);
     const [isLoading, setIsLoading] = useState(true);
     const [content, setContent] = useState("");
     const [name, setName] = useState("");
 
-    // console.log(postData[7].content);
+    const queryClient = useQueryClient();
 
-    // setPostData()
     setTimeout(() => {
         setIsLoading(false);
     }, 1000);
@@ -22,7 +20,6 @@ export default function MobileInput({ setIsComplete }) {
             setContent(content.substr(0, 100));
             window.alert("내용은 100자 이내로 적어주세요!");
         }
-
         if (name.length > 10) {
             setName(name.substr(0, 10));
             window.alert("닉네임은 10자 이내로 적어주세요!");
@@ -41,19 +38,17 @@ export default function MobileInput({ setIsComplete }) {
             window.alert("내용과 이름을 모두 입력해주세요!");
         } else {
             try {
-                const res = await axios.post(API_URL + "post/", config);
-                // context에 데이터 저장
-                const crrPost = res.data;
-                let copy = postData;
-                copy[crrPost.id].content = crrPost.post_msg;
-                copy[crrPost.id].name = crrPost.author;
-                setPostData(copy);
+                await axios.post(API_URL + "post/", config);
                 setIsComplete(true);
             } catch (err) {
                 console.log(err);
             }
         }
     };
+
+    const updateMutation = useMutation(() => handleAddPost(), {
+        onSuccess: () => queryClient.invalidateQueries(["getPostData"]),
+    });
 
     return (
         <InputCont>
@@ -91,6 +86,7 @@ export default function MobileInput({ setIsComplete }) {
                         onChange={(e) => {
                             setName(e.target.value);
                         }}
+                        size={name.length}
                     />
                     {content.length === 0 || name.length === 0 ? (
                         <button className="disabled" disabled>
@@ -206,7 +202,7 @@ const Name = styled.input`
     position: absolute;
     bottom: 23px;
     right: 23px;
-    width: 202px;
+    max-width: 202px;
     border-radius: 6px;
     background: var(--input-color);
     border: none;
