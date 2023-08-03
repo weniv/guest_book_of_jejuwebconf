@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/guest_book_of_jejuwebconf/static/js/main.3175e5a4.js",
+    "static/media/bg-9.svg": "/guest_book_of_jejuwebconf/static/media/bg-9.ac1a1c459dd54dcde25505bef1844d70.svg",
+    "static/media/logo.svg": "/guest_book_of_jejuwebconf/static/media/logo.81631aef732116d168e73f8cdc2d73ad.svg",
+    "static/media/bg-8.svg": "/guest_book_of_jejuwebconf/static/media/bg-8.ec1ea5939f0c9ede5ffc506dc6f09675.svg",
+    "static/media/bg-1.svg": "/guest_book_of_jejuwebconf/static/media/bg-1.6e919f8d9f6d19bd9cadca6441ffd884.svg",
+    "static/media/bg-7.svg": "/guest_book_of_jejuwebconf/static/media/bg-7.9c0edaec22a268e26466c339a480e771.svg",
+    "static/media/bg-2.svg": "/guest_book_of_jejuwebconf/static/media/bg-2.97a42e6ad64933d2be1fa254f2911c6c.svg",
+    "static/media/bg-11.svg": "/guest_book_of_jejuwebconf/static/media/bg-11.24e49e01be447f4377b2c12edaf142da.svg",
+    "static/media/bg-12.svg": "/guest_book_of_jejuwebconf/static/media/bg-12.f61183a22dba1abde0b8068785b64ebc.svg",
+    "static/media/bg-4.svg": "/guest_book_of_jejuwebconf/static/media/bg-4.bb0bee936020ed9c8edb73b1f9e6dd71.svg",
+    "static/media/bg-3.svg": "/guest_book_of_jejuwebconf/static/media/bg-3.e90d1231be232709ebd7b2ccadf64e8e.svg",
+    "static/media/icon-magnifier.svg": "/guest_book_of_jejuwebconf/static/media/icon-magnifier.5abc321adffef4592ba0a5d1213b0600.svg",
+    "index.html": "/guest_book_of_jejuwebconf/index.html",
+    "static/media/icon-check.svg": "/guest_book_of_jejuwebconf/static/media/icon-check.825bdfafafdaec793435cce781d68e99.svg",
+    "static/media/triangle.svg": "/guest_book_of_jejuwebconf/static/media/triangle.70031430e32a1688db61499fcc33a6af.svg",
+    "main.3175e5a4.js.map": "/guest_book_of_jejuwebconf/static/js/main.3175e5a4.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.3175e5a4.js"
+  ]
+}
