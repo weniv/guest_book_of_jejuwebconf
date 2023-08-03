@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/guest_book_of_jejuwebconf/static/js/main.f178d8ed.js",
+    "main.js": "/guest_book_of_jejuwebconf/static/js/main.b632a869.js",
     "static/media/bg-9.svg": "/guest_book_of_jejuwebconf/static/media/bg-9.ac1a1c459dd54dcde25505bef1844d70.svg",
     "static/media/logo.svg": "/guest_book_of_jejuwebconf/static/media/logo.81631aef732116d168e73f8cdc2d73ad.svg",
     "static/media/bg-8.svg": "/guest_book_of_jejuwebconf/static/media/bg-8.ec1ea5939f0c9ede5ffc506dc6f09675.svg",
@@ -15,9 +15,9 @@
     "index.html": "/guest_book_of_jejuwebconf/index.html",
     "static/media/icon-check.svg": "/guest_book_of_jejuwebconf/static/media/icon-check.825bdfafafdaec793435cce781d68e99.svg",
     "static/media/triangle.svg": "/guest_book_of_jejuwebconf/static/media/triangle.70031430e32a1688db61499fcc33a6af.svg",
-    "main.f178d8ed.js.map": "/guest_book_of_jejuwebconf/static/js/main.f178d8ed.js.map"
+    "main.b632a869.js.map": "/guest_book_of_jejuwebconf/static/js/main.b632a869.js.map"
   },
   "entrypoints": [
-    "static/js/main.f178d8ed.js"
+    "static/js/main.b632a869.js"
   ]
 }
